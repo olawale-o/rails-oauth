@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   namespace :v1, defaults: { format: :json } do
     get '/private', to: 'private#index'
+    post 'social_auth/callback', to: 'social_auth#authenticate_social_auth_user'
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
