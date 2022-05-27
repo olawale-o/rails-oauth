@@ -25,7 +25,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   
       resource '*',
         headers: :any,
-        expose: %w[Authorization access-token expired token-type uid client],
+        expose: %w[Authorization access-token expiry token-type uid client],
         methods: :any
       end
   end
